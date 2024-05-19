@@ -1,18 +1,125 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
     <head>
         <title>Projeto 1</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     </head>
+    <style>
+        @media (min-width: 1000px) { 
+            img{
+                width: 50%;
+            }
+        }
 
-    <body style="height: 100vh; background-color: #f7f7f7;">
-        
-        <main>
-            
+        img{
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+        }
+
+        img:hover{
+            transform: scale(1.04);
+            transition: .2s;
+        }
+
+        body{
+            background-color: #fcfcfc;
+        }
+
+        header{
+            max-width: 1100px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #ffbaba;
+        }
+
+        main{
+            max-width: 1100px;
+            position: relative;
+            margin: 0 auto;
+            background-color: #ffbebe;
+            padding: 20px 50px;
+        }
+
+        .quotes-container{
+            background-color: #f18484;
+            padding: 10px;
+            font-style: italic;
+        }
+
+        blockquote{
+            font-weight: bold;
+        }
+
+        ul> li{
+            padding: 5px;
+        }
+
+        a{
+            text-decoration: none;
+            color: #ff3d3d;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s; 
+        }
+
+        p>a:hover{
+            transition: .2s;
+            color: #000;
+        }
+
+    </style>
+
+    <body style="height: 100vh;">
+        <main >
+            <h1 class="titte-page ">Avengers</h1>
+            <p class="paragraph-page fs-3 fst-italic"> Heroes and Villains: The Brands of Marvel</p>
+            <hr>
+            <figure>
+                <img class="d-block mx-auto" src="marvel.jpg" width="80%" alt="avengers" >
+                <figcaption class="text-center">Characters World of Marvel</figcaption>
+            </figure>
+            <div class="">
+                <h2 class="text-center">A little bit of marvel history</h2>
+                <p class="text-center">The <span class="fw-bold">Marvel Universe</span> is a <span class="fw-bold">vast tapestry</span> woven with threads of <span class="fw-bold">heroism</span>, <span class="fw-bold">villainy</span>, and endless adventure. From the dawn of time to the far reaches of the cosmos, its stories span dimensions and realities, showcasing the triumphs and tribulations of <span class="fw-bold">extraordinary beings</span>.</p>
+                <p class="text-center">In every corner of the <span class="fw-bold">Marvel Universe</span>, from the bustling streets of New York City to the desolate landscapes of distant planets, there exists a palpable energy—a sense of limitless possibility. Within this boundless expanse, iconic figures such as <span class="fw-bold">Spider-Man</span>, <span class="fw-bold">Captain America</span>, and the mighty <span class="fw-bold">Thor</span> stand as beacons of hope, inspiring generations with their unwavering resolve in the face of adversity.</p>
+                <p class="text-center">Yet, amidst the grandeur of cosmic battles and the intimacy of personal struggles, the heart of the <span class="fw-bold">Marvel Universe</span> lies in its characters—their flaws, their fears, and their triumphs. Through their journeys, we find reflections of our own humanity, resonating with themes of courage, sacrifice, and the enduring power of friendship. As the <span class="fw-bold">Marvel</span> tapestry continues to unfold, it invites us to embark on a never-ending odyssey, where imagination knows no bounds and the spirit of adventure knows no limits.</p>
+            </div>
+            <div class="quotes-container blockquote text-center">
+                <blockquote >"With great power comes great responsibility."</blockquote>
+                <p>- Uncle Ben</p>
+            </div>
+            <div class="curiosidades">
+                <hr>
+
+                <h2 class="text-center">Curiositys</h2>
+                <ul>
+                    <li>Wolverine was initially conceived as a mutated wolverine before evolving into a mutant with healing powers and retractable claws.</li>
+                    <li>Deadpool, originally a villain, transformed into a beloved antihero known for his humor and breaking the fourth wall.</li>
+                    <li>Stan Lee made memorable cameos in Marvel films, becoming a beloved tradition for fans.</li>
+                    <li>Captain America wielded Thor's hammer Mjolnir in the comics, showcasing his worthiness.</li>
+                    <li>The Hulk's origin was inspired by a blend of "Dr. Jekyll and Mr. Hyde" and "Frankenstein," reflecting on nuclear dangers and science's consequences.</li>
+                  </ul>
+            </div>
+            <hr>
+
+            <div class="quotes-container blockquote text-center">
+                <blockquote>"You can't win without some loss."</blockquote>
+                <p>- Captain America</p>
+            </div>
+            <div class="img-bold">
+                <figure>
+                    <img src="marvel2.jpg" class="d-block mx-auto" width="80%" alt="outros personagens marvel">
+                    <figcaption class="text-center">Captain America embodies patriotism and leadership, while Thor represents godly power and protection.</figcaption>
+            </figure>
+            </div>
+            <hr>
+            <div class="maisinfo">
+                <h2 class="text-center">More info:</h2>
+                <p class="text-center">Dive into the Marvel Universe for untold stories and epic battles!<a target="_blank" href="https://www.marvel.com/"> Join the adventure now!</a></p>
+            </div>
         </main>
+
 
     </body>
 </html>
