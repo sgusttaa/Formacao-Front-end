@@ -1,0 +1,117 @@
+/* media queries (celular) */
+@media only screen and (max-width: 768px) {
+
+    .nav-container nav{
+        height: 150px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* geral */
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+    padding: 1px;
+}
+
+h1, h2, h3{
+    color: #333;
+}
+
+p{
+    color: #70747a;
+}
+
+/* navbar */
+
+nav{
+    width: 100%;
+    height: 100px;
+    background-color: #232a31;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+    padding: 15px;
+}
+
+.nav-items{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    height: 100px;
+}
+
+.nav-items li{
+    display: inline-block;
+    align-items: center;
+    padding: 0px 10px;
+    text-transform: uppercase;
+}
+
+.nav-items li:last-child{
+    padding: 0px;
+}
+
+.nav-items li a{
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-items li a:hover{
+    color: #9e9e9e;
+}
+
+.default-btn{
+    padding: 10px 20px;
+    background-color: #52CC7B;
+    border-radius: 10px;
+}
+
+.nav-items .default-btn:hover{
+    background-color: #22bb5f;
+    color: #fff;
+    padding: 12px 24px;
+}
+
+/* main banner*/
+
+.main-banner{
+    background-image: url('../mainbanner.png' );
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0 ;
+}
+
+.main-banner h1,
+.main-banner p{
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: #000 2px 20px 10px;
+}
+
+.main-banner h1{
+    font-size: 3vw;
+}
+.main-banner p{
+    font-size: 1.7vw;
+}
+
+main{
+    padding: 5px 5px;
+}
