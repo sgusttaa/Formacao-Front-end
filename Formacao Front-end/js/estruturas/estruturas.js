@@ -1,9 +1,9 @@
 // 1 - Variáveis
-let nome = "Matheus";
+let nome = "igor";
 
 console.log(nome);
 
-nome = "Matheus Battisti";
+nome = "igor Battisti";
 
 console.log(nome);
 
@@ -26,7 +26,7 @@ let a = 10, b = 20, c = 30;
 
 console.log(a, b, c);
 
-const nomecompleto = "Matheus Battisti";
+const nomecompleto = "igor Battisti";
 
 const nomeCompleto = "João da Silva";
 
@@ -110,13 +110,13 @@ if (num == 10){
   console.log("numero menor que 10!")
 }
 
-const userName = "Matheus";
+const userName = "igor";
 const userAge = 31;
 
 if (userName === "José") {
   console.log("Bem vindo José!");
-} else if (userName === "Matheus" && userAge === 31) {
-  console.log("Olá Matheus, você tem 31 anos!");
+} else if (userName === "igor" && userAge === 31) {
+  console.log("Olá igor, você tem 31 anos!");
 } else {
   console.log("Nenhuma condição aceita!");
 }
@@ -124,11 +124,10 @@ if (userName === "José") {
 // 10 while
 let n = 0;
 
-while(n <= 5){
+while(n < 5){  // enquanto n for menor q 5 ira executar o console log, e n++ 
   console.log(`repetindo ${n}`)
-  p = p + 1;
+  n = n + 1;
 }
-
 
 // loop infinito
 // let x = 10;
@@ -139,25 +138,26 @@ while(n <= 5){
 // 11 - do while
 let o = 10;
 
-do {
+do {  // faça console log mostre a msg, e o-- va diminuindo 
   console.log(`Valor de o: ${o}`);
   o = o - 1;
-} while (o > 1);
+} while (o > 1); // enquanto o for maior q 1
 
 // 12 - for
+
 for (let t = 0; t < 10; t++) {
   console.log("Repetindo algo...");
 }
 
 let r = 10;
 
-for (r; r > 0; r = r - 1) {
+for (r; r > 0; r-- ) {
   console.log(`O r está diminuindo: ${r}`);
 }
 
 console.log(r);
 
-// 13 - identaçao
+// 13 - identação
 for (let u = 0; u < 10; u++) {
   if (u * 2 > 10) {
     console.log(`Maior que 10! ${u}`);
@@ -174,7 +174,7 @@ for (let g = 20; g > 10; g--) {
 
   if (g === 12) {
     console.log("Chegamos no 12!");
-    break;
+    break; // força a saida do loop 
   }
 }
 
@@ -182,30 +182,32 @@ for (let g = 20; g > 10; g--) {
 for (s = 0; s < 10; s++) {
   if (s % 2 === 0) {
     console.log("Número par!");
-    continue;
+    continue; // pode pular uma ou mais execuções no loop
   }
   console.log(s);
 }
 
 // 15 - switch
-const job = "Advogado";
 
-switch (job) {
-  case "Programador":
-    console.log("Voce é um programador!");
+const trabalho = 'dentista';
+
+switch(trabalho){
+  case 'programador':
+    console.log('voce e um programador');
     break;
-  case "Advogado":
-    console.log("Voce é um advogado!");
+  case 'advogado':
+    console.log('voce e um advogado');
+    break;a
+  case 'dentista':
+    console.log('voce e um dentista');
     break;
-  case "Engenheiro":
-    console.log("Voce é um engenheiro!");
-    break;
-  default:
-    console.log("Profissão não encontrada");
+    default:// se nenhum for executado aparrece o console abaixo
+      console.log('profissao nao encontrada')
 }
 
+
 // switch "errado"
-const l = 100;
+const l = 100; //escolher um bom nome para a variavel
 
 switch (l) {
   case 200:
