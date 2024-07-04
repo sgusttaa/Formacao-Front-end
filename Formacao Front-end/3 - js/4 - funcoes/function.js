@@ -89,3 +89,42 @@ parOuImpar(6)
 
 // 6 - mais de arrow 
 
+const raizQuadrada1 = (n) => {
+    return n * n;
+}
+
+const raizQuadrada2 = (n) => n * n;
+
+console.log(raizQuadrada1(4));
+console.log(raizQuadrada2(4));
+
+const helloWorld = () => console.log('hello!');
+
+helloWorld();
+
+// 7 - parametro opcional
+
+const multiplicacao = function (n, m) {
+    if (m === undefined) { // se m nao for definido
+        return n * 2;
+    }else{
+        return m * n;
+    }
+};
+
+console.log(multiplicacao(4))
+console.log(multiplicacao(4, 4))
+
+const greeting = (nome) => {
+    if (!nome){ // caso nao seja fornecido
+        console.log('Olá!');
+        return;
+    }
+
+    console.log(`Olá ${nome}`);
+};
+
+greeting('');
+greeting('gustavo');
+
+// 8 - valor default
