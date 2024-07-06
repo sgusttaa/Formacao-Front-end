@@ -128,3 +128,88 @@ greeting('');
 greeting('gustavo');
 
 // 8 - valor default
+
+const customGreeting = (name, greet = 'Olá') =>{
+    return `${greet}, ${name}!`;
+}
+
+console.log(customGreeting('gustavo'))// caso nao seja usado um 2 parametro entra o greet no lugar
+
+console.log(customGreeting('gustavo', 'Olá, bom dia'))
+
+const repeatText = (text, repeat = 2) =>{ 
+    for(let i = 0; i < repeat; i++){
+        console.log(text)
+    }
+}
+
+repeatText('testando');
+
+repeatText('agora repete 5 vezes', 5)
+
+// 9 - closure  - conjunto de funcoes
+
+function someFunction() {
+    let txt = 'Alguma coisa'
+
+    function display() {
+        console.log(txt)
+    }
+
+    display();
+}
+
+someFunction();
+
+// 10 - mais sobre closures
+
+const multiplicacaoClosure = (n) => {
+    return (m) =>{
+        return n * m;
+    }
+}
+
+const c1 = multiplicacaoClosure(5);
+const c2 = multiplicacaoClosure(10);
+
+console.log(c1);
+console.log(c2);
+console.log(c1(5));
+console.log(c2(10));
+
+// 11 - recursao  - permite a funcao se autoinvocar
+
+const untilTen = (n, m) =>{
+    if(n < 10) {
+        console.log("A função parou de executar!")
+    }else{
+        const x = n - m;
+
+        console.log(x);
+
+        untilTen(x, m)
+    }
+};
+
+untilTen(100, 7)
+
+// infinite recursion
+
+// function run(){
+//     console.log('executando...');
+//     run();
+// }
+// run()
+
+
+function factorial(x) {
+    if(x === 0){
+        return 1
+    }else {
+        return x * factorial(x - 1)
+    }
+}
+
+const num = 6;
+const result = factorial(num);
+console.log(`O fatorial do numero ${num} é: ${result}`) 
