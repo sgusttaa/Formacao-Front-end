@@ -227,6 +227,7 @@ const reverseTest = [1, 2, 3, 4, 5]
 reverseTest.reverse();
 console.log(reverseTest)
 
+//strings
 // 18 - trim  nao modifica a string original
 
 const trimTest = '    testando \n  '
@@ -251,3 +252,105 @@ const padEnd = newNumber.padEnd(10, '0')
 console.log(padEnd)
 
 // 20 - split
+
+const frase = 'o rato roeu a roupa do rei de roma'
+
+const arrayDaFrase = frase.split(' ')
+
+console.log(arrayDaFrase)
+
+// 21 - join
+
+const fraseDeNovo = arrayDaFrase.join(' ')
+console.log(fraseDeNovo)
+
+const itensParaComprar = ['mouse', 'teclado', 'monitor']
+const fraseDeCompra = `precisamos comprar: ${itensParaComprar.join(', ')}.`
+
+console.log(fraseDeCompra )
+
+// 22 - repeat
+
+const palavra = 'testando '
+
+console.log(palavra.repeat(4))
+
+//arrays
+// 23 - rest operador
+
+const somaInfinita = (...args) => {
+    let total = 0;
+
+    for(let i = 0; i < args.length; i++){
+        total += args[i]
+    }
+    return total
+}
+
+console.log(somaInfinita(1,2,3,4,5,6,7,8,9,0))
+console.log(somaInfinita(100, 800, 10))
+
+// 24 - for of
+
+const somaInfinita2 = (...args) => {
+    let total = 0;
+
+    for(num of args) {
+        total += num
+    }
+    return total
+}
+
+console.log(somaInfinita2(1, 2, 3, 7))
+
+//object
+// 25 - distructuring em objetos
+
+const userDetails = {
+    firstName: 'gustavo',
+    lastName: 'prado',
+    job: 'programador'
+}
+
+const {firstName, lastName, job} = userDetails
+
+console.log(firstName, lastName, job)
+
+// renomear variaveis
+const {firstName: primeiroNome} = userDetails
+
+console.log(primeiroNome)
+
+// array
+// 26 - distructuring em array
+
+const myList = ['aviao', 'submarino', 'carro']
+
+const [veiculoA, veiculoB, veiculoC] = myList
+
+console.log(veiculoA, veiculoB, veiculoC)
+
+// 27 - JSON
+
+const myJson = '{"name": "Gustavo", "age": 31, "skills": ["PHP", "JavaScript", "Python"]}'
+
+// 28 - conversao de JSON para objeto (stringify, parse)
+
+const myObject = JSON.parse(myJson)
+
+console.log(myObject)
+console.log(myObject.name)
+
+//json invalido
+const badJson = '{"name": gustavo, "age": 31 }'
+
+// const myBadObject = JSON.parse(badJson)
+
+myObject.isOpenToWork = true
+console.log(myObject)
+
+const myNewJson = JSON.stringify(myObject)
+
+console.log(myNewJson)
+
+console.log(typeof myNewJson)
